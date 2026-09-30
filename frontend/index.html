@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🚆 India's Smart Railway Platform</span>
+            <h1 class="hero-title">Book Railway &amp; Metro Tickets</h1>
+            <p class="hero-sub">Fast • Secure • Easy Booking Across India</p>
+            <p class="hero-sub">Indian Railways | Metro | Express</p>
+            <div class="hero-buttons">
+                <a class="btn btn-white" href="search.html">Book Ticket</a>
+                <a class="btn btn-green" href="search.html">Live Status</a>
+            </div>
+        </div>
+        <div class="hero-image">🚄</div>
+    </section>
+
+    <form class="search-box" id="quick-search-form">
+        <h2>Search Your Train</h2>
+        <div class="search-grid">
+            <input type="text" id="qs-from" class="city-input" placeholder="🧑‍✈️ From Station">
+            <input type="text" id="qs-to" class="city-input" placeholder="🚉 To Station">
+            <input type="date" id="qs-date">
+            <select id="qs-class">
+                <option>Sleeper</option>
+                <option>AC 3 Tier</option>
+                <option>AC 2 Tier</option>
+                <option>AC 1st Class</option>
+            </select>
+            <button type="submit" class="search-btn">🔍 Search</button>
+        </div>
+    </form>
+
+    <main class="container">
+        <h2 class="section-title"> Trains </h2>
+        <div class="grid-3" id="popular-trains">
+            <p class="loading">Loading trains...</p>
+        </div>
+    </main>
+
+    <main class="container" style="padding-top:0">
+        <h2 class="section-title" style="justify-content:center">Why Choose Us?</h2>
+        <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+            <div class="why-card">
+                <div class="icon">⚡</div>
+                <h3>Instant Booking</h3>
+                <p>Book within seconds.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🔒</div>
+                <h3>Secure Payment</h3>
+                <p>100% Safe Transactions.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">📍</div>
+                <h3>Live Status</h3>
+                <p>Realtime Tracking.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🎫</div>
+                <h3>E-Ticket</h3>
+                <p>Download Anytime.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h2>🚉 Train Booking System</h2>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="cities.js"></script>
+    <script src="common.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

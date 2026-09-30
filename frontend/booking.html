@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking - Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="container">
+        <div id="msg-banner-root"></div>
+
+        <div class="booking-layout">
+            <div class="panel">
+                <h2>🧑‍✈️ Passenger Details</h2>
+                <form id="booking-form">
+                    <div class="form-grid">
+                        <input type="text" id="p-name" placeholder="Passenger Name" required>
+                        <input type="number" id="p-age" placeholder="Age" min="1" max="120" required>
+                        <select id="p-gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                        <input type="tel" id="p-mobile" placeholder="Mobile Number" required>
+                        <input type="email" id="p-email" placeholder="Email Address" required>
+                        <input type="number" id="p-count" min="1" max="6" value="1">
+                    </div>
+                    <button type="submit" class="confirm-btn" id="confirm-btn">Confirm Booking</button>
+                </form>
+            </div>
+
+            <div class="panel">
+                <h2>🎫 Journey Summary</h2>
+                <div class="summary-row"><span>Train:</span><span id="sum-train">-</span></div>
+                <div class="summary-row"><span>Train No:</span><span id="sum-trainno">-</span></div>
+                <div class="summary-row"><span>From:</span><span id="sum-from">-</span></div>
+                <div class="summary-row"><span>To:</span><span id="sum-to">-</span></div>
+                <div class="summary-row"><span>Journey Date:</span><span id="sum-date">-</span></div>
+                <div class="summary-row"><span>Class:</span><span id="sum-class">Sleeper</span></div>
+                <div class="summary-row"><span>Duration:</span><span id="sum-duration">-</span></div>
+                <div class="summary-row"><span>Available Seats:</span><span id="sum-seats">-</span></div>
+
+                <div style="height:16px"></div>
+
+                <div class="summary-row"><span>Passenger:</span><span id="sum-passenger">-</span></div>
+                <div class="summary-row"><span>Age:</span><span id="sum-age">-</span></div>
+                <div class="summary-row"><span>Gender:</span><span id="sum-gender">Male</span></div>
+                <div class="summary-row"><span>Mobile:</span><span id="sum-mobile">-</span></div>
+                <div class="summary-row"><span>Email:</span><span id="sum-email">-</span></div>
+                <div class="summary-row"><span>Passengers:</span><span id="sum-count">1</span></div>
+
+                <div class="fare-box">Total Fare: ₹<span id="sum-fare">0</span></div>
+
+                <div class="ticket-box" id="ticket-box" style="display:none">
+                    <h3>🎫 Ticket Details</h3>
+                    <div class="ticket-row"><span>PNR:</span><span id="ticket-pnr">-</span></div>
+                    <div class="ticket-row"><span>Coach:</span><span id="ticket-coach">-</span></div>
+                    <div class="ticket-row"><span>Seat:</span><span id="ticket-seat">-</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="common.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

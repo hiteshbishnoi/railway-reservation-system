@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking - Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>🧑‍✈️ Search Train</h1>
+        </div>
+
+        <form class="search-box" id="search-form" style="margin:0 0 40px;">
+            <div class="search-grid">
+                <input type="text" id="s-from" class="city-input" placeholder="From Station">
+                <input type="text" id="s-to" class="city-input" placeholder="To Station">
+                <input type="date" id="s-date">
+                <select id="s-class">
+                    <option value="Sleeper">Sleeper</option>
+                    <option value="3A">AC 3 Tier</option>
+                    <option value="2A">AC 2 Tier</option>
+                    <option value="1A">AC 1st Class</option>
+                </select>
+                <button type="submit" class="search-btn">🔍 Search</button>
+            </div>
+        </form>
+
+        <div class="grid-3" id="results">
+            <p class="loading">Loading trains...</p>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="cities.js"></script>
+    <script src="common.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
